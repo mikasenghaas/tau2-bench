@@ -1,0 +1,6 @@
+from tau2.utils.utils import DATA_DIR
+
+GOVERNMENT_DATA_DIR = DATA_DIR / "tau2" / "domains" / "government"
+GOVERNMENT_DB_PATH = GOVERNMENT_DATA_DIR / "db.json"
+GOVERNMENT_POLICY_PATH = GOVERNMENT_DATA_DIR / "policy.md"
+GOVERNMENT_TASK_SET_PATH = GOVERNMENT_DATA_DIR / "tasks.json"

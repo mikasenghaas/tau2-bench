@@ -14,8 +14,59 @@ from tau2.domains.airline.environment import get_tasks as airline_domain_get_tas
 from tau2.domains.airline.environment import (
     get_tasks_split as airline_domain_get_tasks_split,
 )
+from tau2.domains.car_rental.environment import (
+    get_environment as car_rental_domain_get_environment,
+)
+from tau2.domains.car_rental.environment import (
+    get_tasks as car_rental_domain_get_tasks,
+)
+from tau2.domains.car_rental.environment import (
+    get_tasks_split as car_rental_domain_get_tasks_split,
+)
+from tau2.domains.clinic.environment import (
+    get_environment as clinic_domain_get_environment,
+)
+from tau2.domains.clinic.environment import get_tasks as clinic_domain_get_tasks
+from tau2.domains.clinic.environment import (
+    get_tasks_split as clinic_domain_get_tasks_split,
+)
+from tau2.domains.festival.environment import (
+    get_environment as festival_domain_get_environment,
+)
+from tau2.domains.festival.environment import get_tasks as festival_domain_get_tasks
+from tau2.domains.festival.environment import (
+    get_tasks_split as festival_domain_get_tasks_split,
+)
+from tau2.domains.government.environment import (
+    get_environment as government_domain_get_environment,
+)
+from tau2.domains.government.environment import get_tasks as government_domain_get_tasks
+from tau2.domains.government.environment import (
+    get_tasks_split as government_domain_get_tasks_split,
+)
+from tau2.domains.helpdesk.environment import (
+    get_environment as helpdesk_domain_get_environment,
+)
+from tau2.domains.helpdesk.environment import get_tasks as helpdesk_domain_get_tasks
+from tau2.domains.helpdesk.environment import (
+    get_tasks_split as helpdesk_domain_get_tasks_split,
+)
+from tau2.domains.library.environment import (
+    get_environment as library_domain_get_environment,
+)
+from tau2.domains.library.environment import get_tasks as library_domain_get_tasks
+from tau2.domains.library.environment import (
+    get_tasks_split as library_domain_get_tasks_split,
+)
 from tau2.domains.mock.environment import get_environment as mock_domain_get_environment
 from tau2.domains.mock.environment import get_tasks as mock_domain_get_tasks
+from tau2.domains.restaurant.environment import (
+    get_environment as restaurant_domain_get_environment,
+)
+from tau2.domains.restaurant.environment import get_tasks as restaurant_domain_get_tasks
+from tau2.domains.restaurant.environment import (
+    get_tasks_split as restaurant_domain_get_tasks_split,
+)
 from tau2.domains.retail.environment import (
     get_environment as retail_domain_get_environment,
 )
@@ -210,14 +261,63 @@ try:
     registry.register_agent(LLMGTAgent, "llm_agent_gt")
     registry.register_agent(LLMSoloAgent, "llm_agent_solo")
 
-    registry.register_domain(mock_domain_get_environment, "mock")
-    registry.register_tasks(mock_domain_get_tasks, "mock")
-
     registry.register_domain(airline_domain_get_environment, "airline")
     registry.register_tasks(
         airline_domain_get_tasks,
         "airline",
         get_task_splits=airline_domain_get_tasks_split,
+    )
+
+    registry.register_domain(car_rental_domain_get_environment, "car_rental")
+    registry.register_tasks(
+        car_rental_domain_get_tasks,
+        "car_rental",
+        get_task_splits=car_rental_domain_get_tasks_split,
+    )
+
+    registry.register_domain(clinic_domain_get_environment, "clinic")
+    registry.register_tasks(
+        clinic_domain_get_tasks,
+        "clinic",
+        get_task_splits=clinic_domain_get_tasks_split,
+    )
+
+    registry.register_domain(festival_domain_get_environment, "festival")
+    registry.register_tasks(
+        festival_domain_get_tasks,
+        "festival",
+        get_task_splits=festival_domain_get_tasks_split,
+    )
+
+    registry.register_domain(government_domain_get_environment, "government")
+    registry.register_tasks(
+        government_domain_get_tasks,
+        "government",
+        get_task_splits=government_domain_get_tasks_split,
+    )
+
+    registry.register_domain(helpdesk_domain_get_environment, "helpdesk")
+    registry.register_tasks(
+        helpdesk_domain_get_tasks,
+        "helpdesk",
+        get_task_splits=helpdesk_domain_get_tasks_split,
+    )
+
+    registry.register_domain(library_domain_get_environment, "library")
+    registry.register_tasks(
+        library_domain_get_tasks,
+        "library",
+        get_task_splits=library_domain_get_tasks_split,
+    )
+
+    registry.register_domain(mock_domain_get_environment, "mock")
+    registry.register_tasks(mock_domain_get_tasks, "mock")
+
+    registry.register_domain(restaurant_domain_get_environment, "restaurant")
+    registry.register_tasks(
+        restaurant_domain_get_tasks,
+        "restaurant",
+        get_task_splits=restaurant_domain_get_tasks_split,
     )
 
     registry.register_domain(retail_domain_get_environment, "retail")
