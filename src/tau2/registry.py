@@ -39,6 +39,13 @@ from tau2.domains.telecom.environment import (
 from tau2.domains.telecom.environment import (
     get_tasks_split as telecom_domain_get_tasks_split,
 )
+from tau2.domains.festival.environment import (
+    get_environment as festival_domain_get_environment,
+)
+from tau2.domains.festival.environment import get_tasks as festival_domain_get_tasks
+from tau2.domains.festival.environment import (
+    get_tasks_split as festival_domain_get_tasks_split,
+)
 from tau2.environment.environment import Environment
 from tau2.user.base import BaseUser
 from tau2.user.user_simulator import DummyUser, UserSimulator
@@ -242,6 +249,13 @@ try:
         telecom_domain_get_tasks,
         "telecom-workflow",
         get_task_splits=telecom_domain_get_tasks_split,
+    )
+
+    registry.register_domain(festival_domain_get_environment, "festival")
+    registry.register_tasks(
+        festival_domain_get_tasks,
+        "festival",
+        get_task_splits=festival_domain_get_tasks_split,
     )
 
     logger.debug(
