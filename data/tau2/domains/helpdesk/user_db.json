@@ -1,0 +1,31 @@
+{
+  "workstation": {
+    "internet_connected": true,
+    "vpn_connected": false,
+    "vpn_error": null,
+    "installed_software": {
+      "Chrome": "120.0",
+      "Outlook": "16.0",
+      "Teams": "1.6",
+      "Slack": "4.35"
+    },
+    "browser_cache_size_mb": 250.0,
+    "needs_restart": false,
+    "last_restart": null,
+    "service_statuses": {
+      "email": "accessible",
+      "jira": "accessible",
+      "confluence": "accessible",
+      "github": "accessible",
+      "vpn_portal": "accessible"
+    }
+  },
+  "surroundings": {
+    "employee_name": null,
+    "employee_email": null,
+    "employee_id": null,
+    "is_remote": false,
+    "account_locked": false,
+    "password_expired": false
+  }
+}
